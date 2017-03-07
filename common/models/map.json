@@ -1,0 +1,36 @@
+{
+  "name": "map",
+  "plural": "maps",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "name": {
+      "type": "string",
+      "required": true
+    }
+  },
+  "validations": [],
+  "relations": {
+    "hexes": {
+      "type": "hasMany",
+      "model": "hex",
+      "foreignKey": "mapId"
+    }
+  },
+  "acls": [
+    {
+      "accessType": "*",
+      "principalType": "ROLE",
+      "principalId": "$authenticated",
+      "permission": "ALLOW",
+      "property": [
+        "create", "find", "update", "upsert", "search", "findById", "delete", "__get__hexes",
+        "__create__hexes","__updateById__hexes", "__delete__hexes", "__destroyById__hexes"
+      ]
+    }
+  ],
+  "methods": {}
+}

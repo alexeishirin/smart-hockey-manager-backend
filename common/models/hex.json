@@ -1,0 +1,34 @@
+{
+  "name": "hex",
+  "plural": "hexes",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "type": {
+      "type": "number",
+      "required": true,
+      "default": 0
+    },
+    "x": {
+      "type": "number",
+      "required": true
+    },
+    "y": {
+      "type": "number",
+      "required": true
+    }
+  },
+  "validations": [],
+  "relations": {
+    "map": {
+      "type": "belongsTo",
+      "model": "map",
+      "foreignKey": "mapId"
+    }
+  },
+  "acls": [],
+  "methods": {}
+}

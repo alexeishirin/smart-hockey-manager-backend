@@ -1,0 +1,53 @@
+{
+  "name": "account",
+  "plural": "accounts",
+  "base": "User",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "startingLatitude": {
+      "type": "number"
+    },
+    "startingLongitude": {
+      "type": "number"
+    },
+    "startingMapX": {
+      "type": "number"
+    },
+    "startingMapY": {
+      "type": "number"
+    }
+  },
+  "validations": [],
+  "relations": {
+    "accessTokens": {
+      "type": "hasMany",
+      "model": "AccessToken",
+      "foreignKey": "userId"
+    },
+    "identities": {
+      "type": "hasMany",
+      "model": "userIdentity",
+      "foreignKey": "userId"
+    },
+    "credentials": {
+      "type": "hasMany",
+      "model": "userCredential",
+      "foreignKey": "userId"
+    }
+  },
+  "acls": [
+    {
+      "accessType": "*",
+      "principalType": "ROLE",
+      "principalId": "$everyone",
+      "permission": "ALLOW",
+      "property": [
+        "create", "find", "update", "upsert", "search", "findById", "delete", "getFirebaseToken"
+      ]
+    }
+  ],
+  "methods": {}
+}
