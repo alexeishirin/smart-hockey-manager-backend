@@ -6,7 +6,7 @@ module.exports = function (app){
   console.log(firebaseAdminConfig);
   admin.initializeApp({
     credential: admin.credential.cert(firebaseAdminConfig),
-    databaseURL: "https://derelict-147413.firebaseio.com"
+    databaseURL: "https://smart-hockey-manager.firebaseio.com"
   });
 
 };

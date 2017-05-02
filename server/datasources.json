@@ -3,10 +3,11 @@
     "name": "db",
     "connector": "memory"
   },
-  "derelict": {
-    "url": "mongodb://DarkestDay:Pool1580@waffle.modulusmongo.net:27017/jUjozu2b",
-    "database": "derelict",
-    "name": "derelict",
+  "hockeymanager": {
+  "url": "mongodb://DarkestDay:Pool1580@shm-shard-00-00-qjcwu.mongodb.net:27017,shm-shard-00-01-qjcwu.mongodb.net:27017,shm-shard-00-02-qjcwu.mongodb.net:27017/hockeymanager?ssl=true&replicaSet=shm-shard-0&authSource=admin",
+    "host": "shm-shard-00-00-qjcwu.mongodb.net",
+    "database": "hockeymanager",
+    "name": "shm",
     "connector": "mongodb"
   }
 }

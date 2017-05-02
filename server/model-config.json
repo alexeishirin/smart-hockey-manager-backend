@@ -34,23 +34,23 @@
     "public": false
   },
   "account": {
-    "dataSource": "derelict",
+    "dataSource": "hockeymanager",
     "public": true
   },
   "UserIdentity": {
-    "dataSource": "derelict",
+    "dataSource": "hockeymanager",
     "public": true
   },
   "UserCredential": {
-    "dataSource": "derelict",
+    "dataSource": "hockeymanager",
     "public": true
   },
   "map": {
-    "dataSource": "derelict",
+    "dataSource": "hockeymanager",
     "public": true
   },
   "hex": {
-    "dataSource": "derelict",
+    "dataSource": "hockeymanager",
     "public": true
   }
 }
